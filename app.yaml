@@ -1,0 +1,12 @@
+service: cheapii-client
+env: flex
+runtime: custom
+
+handlers:
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /(.*)
+  static_files: dist/\1
+  upload: dist/(.*)
